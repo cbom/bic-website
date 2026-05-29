@@ -8,7 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <meta property="og:title" content="?????? - ???????? ??????? ?????">
+    <meta property="og:description" content="BIC ????????????? ?? ?????? ?? ????? ?????? ?? ??? ?????? ????">
+    <meta property="og:url" content="https://cbom.github.io/bic-website/hi/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bhardwaj Innovation Center">
+    <link rel="alternate" hreflang="en" href="https://cbom.github.io/bic-website/en/contact.html">
+    <link rel="canonical" href="https://cbom.github.io/bic-website/hi/contact.html">
 </head>
 <body class="lang-hi">
 
@@ -107,7 +114,7 @@
                 <!-- Contact Form -->
                 <div class="col-md-7">
                     <h3 class="mb-4">हमें संदेश भेजें</h3>
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form id="contactForm" onsubmit="return sendWhatsApp(event)">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">आपका नाम</label>
@@ -115,7 +122,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="phone" class="form-label">फोन नंबर</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+91-87091-62950">
+                                <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+91-XXXXX-XXXXX">
                             </div>
                             <div class="col-12">
                                 <label for="email" class="form-label">ईमेल (वैकल्पिक)</label>
@@ -125,11 +132,11 @@
                                 <label for="subject" class="form-label">विषय</label>
                                 <select class="form-select" id="subject" name="subject" required>
                                     <option value="" selected disabled>विषय चुनें</option>
-                                    <option value="admission">नया एडमिशन पूछताछ</option>
-                                    <option value="course-info">कोर्स जानकारी</option>
-                                    <option value="fee">फीस स्ट्रक्चर</option>
-                                    <option value="timing">बैच टाइमिंग</option>
-                                    <option value="other">अन्य</option>
+                                    <option value="नया एडमिशन पूछताछ">नया एडमिशन पूछताछ</option>
+                                    <option value="कोर्स जानकारी">कोर्स जानकारी</option>
+                                    <option value="फीस स्ट्रक्चर">फीस स्ट्रक्चर</option>
+                                    <option value="बैच टाइमिंग">बैच टाइमिंग</option>
+                                    <option value="अन्य">अन्य</option>
                                 </select>
                             </div>
                             <div class="col-12">
@@ -137,12 +144,31 @@
                                 <textarea class="form-control" id="message" name="message" rows="4" required placeholder="अपना संदेश यहाँ लिखें..."></textarea>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-lg">
-                                    <i class="fas fa-paper-plane me-1"></i> संदेश भेजें
+                                <button type="submit" class="btn btn-success btn-lg">
+                                    <i class="fab fa-whatsapp me-1"></i> WhatsApp पर भेजें
                                 </button>
                             </div>
                         </div>
                     </form>
+                    <script>
+                    function sendWhatsApp(e) {
+                        e.preventDefault();
+                        var name = document.getElementById('name').value;
+                        var phone = document.getElementById('phone').value;
+                        var email = document.getElementById('email').value;
+                        var subject = document.getElementById('subject').value;
+                        var message = document.getElementById('message').value;
+                        var text = '*BIC वेबसाइट से नई पूछताछ*%0A'
+                            + '-----------------------------%0A'
+                            + '*नाम:* ' + encodeURIComponent(name) + '%0A'
+                            + '*फोन:* ' + encodeURIComponent(phone) + '%0A'
+                            + (email ? '*ईमेल:* ' + encodeURIComponent(email) + '%0A' : '')
+                            + '*विषय:* ' + encodeURIComponent(subject) + '%0A'
+                            + '*संदेश:* ' + encodeURIComponent(message);
+                        window.open('https://wa.me/918709162950?text=' + text, '_blank');
+                        return false;
+                    }
+                    </script>
                 </div>
             </div>
 
