@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: HTML5 Basics - BIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><i class="fas fa-laptop-code me-2"></i>BIC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../courses.html"><i class="fas fa-book me-1"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../../materials.html"><i class="fas fa-graduation-cap me-1"></i> Study Materials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../contact.html"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+                </ul>
+                <a class="nav-link lang-toggle" href="../../../hi/materials/html-web/lesson-1.html">हिन्दी</a>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-light py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../../materials.html">Study Materials</a></li>
+                    <li class="breadcrumb-item"><a href="../../materials.html">HTML & Web Designing</a></li>
+                    <li class="breadcrumb-item active">Lesson 1: HTML5 Basics</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <section class="py-4">
+        <div class="container">
+            <div class="lesson-content">
+                <h1>Lesson 1: HTML5 Tags, Attributes & Forms</h1>
+<p class="text-muted"><i class="fas fa-clock me-1"></i> Reading time: 15 minutes | <i class="fas fa-signal me-1"></i> Level: Intermediate</p>
+<hr>
+<h2>What is HTML?</h2>
+<p><strong>HTML (HyperText Markup Language)</strong> is the standard language used to create web pages. HTML5 is the latest version. Tags are the building blocks of HTML — they define elements like headings, paragraphs, links, and images.</p>
+
+<h2>Basic HTML Structure</h2>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<h2>Common HTML Tags</h2>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead class="table-primary"><tr><th>Tag</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>&lt;h1&gt; to &lt;h6&gt;</td><td>Headings (largest to smallest)</td><td>&lt;h1&gt;Main Title&lt;/h1&gt;</td></tr>
+<tr><td>&lt;p&gt;</td><td>Paragraph</td><td>&lt;p&gt;Some text&lt;/p&gt;</td></tr>
+<tr><td>&lt;a&gt;</td><td>Link (hyperlink)</td><td>&lt;a href="url"&gt;Click&lt;/a&gt;</td></tr>
+<tr><td>&lt;img&gt;</td><td>Image</td><td>&lt;img src="photo.jpg" alt="desc"&gt;</td></tr>
+<tr><td>&lt;br&gt;</td><td>Line break</td><td>Line 1&lt;br&gt;Line 2</td></tr>
+<tr><td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</td><td>Lists</td><td>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</td></tr>
+<tr><td>&lt;div&gt;</td><td>Container (block)</td><td>&lt;div&gt;content&lt;/div&gt;</td></tr>
+<tr><td>&lt;span&gt;</td><td>Container (inline)</td><td>&lt;span&gt;text&lt;/span&gt;</td></tr>
+<tr><td>&lt;table&gt;</td><td>Table</td><td>&lt;table&gt;&lt;tr&gt;&lt;td&gt;data&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>HTML Attributes</h2>
+<p>Attributes provide additional information about elements. Format: <code>name="value"</code></p>
+<ul>
+<li><strong>href:</strong> URL for links (&lt;a href="..."&gt;)</li>
+<li><strong>src:</strong> Source for images (&lt;img src="..."&gt;)</li>
+<li><strong>alt:</strong> Alternative text for images</li>
+<li><strong>id:</strong> Unique identifier for an element</li>
+<li><strong>class:</strong> Class name for CSS styling</li>
+<li><strong>style:</strong> Inline CSS styles</li>
+</ul>
+
+<h2>HTML Forms</h2>
+<p>Forms collect user input (e.g., login, registration, contact).</p>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>&lt;form action="submit.html" method="POST"&gt;
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="name" required&gt;
+
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" name="email"&gt;
+
+    &lt;label&gt;Password:&lt;/label&gt;
+    &lt;input type="password" name="pass"&gt;
+
+    &lt;label&gt;Gender:&lt;/label&gt;
+    &lt;input type="radio" name="gender" value="male"&gt; Male
+    &lt;input type="radio" name="gender" value="female"&gt; Female
+
+    &lt;label&gt;Message:&lt;/label&gt;
+    &lt;textarea name="message"&gt;&lt;/textarea&gt;
+
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<h3>Input Types</h3>
+<ul>
+<li><code>text</code> — single line text</li>
+<li><code>email</code> — email with validation</li>
+<li><code>password</code> — hidden text</li>
+<li><code>number</code> — numeric input</li>
+<li><code>radio</code> — single selection from options</li>
+<li><code>checkbox</code> — multiple selections</li>
+<li><code>date</code> — date picker</li>
+<li><code>file</code> — file upload</li>
+</ul>
+
+<h2>Semantic HTML5 Tags</h2>
+<ul>
+<li><code>&lt;header&gt;</code> — page/section header</li>
+<li><code>&lt;nav&gt;</code> — navigation links</li>
+<li><code>&lt;main&gt;</code> — main content</li>
+<li><code>&lt;section&gt;</code> — thematic grouping</li>
+<li><code>&lt;article&gt;</code> — independent content</li>
+<li><code>&lt;footer&gt;</code> — page/section footer</li>
+</ul>
+
+<div class="alert alert-success">
+<h5>Key Points to Remember</h5>
+<ul class="mb-0">
+<li>HTML creates web page structure using tags</li>
+<li>Basic structure: &lt;html&gt; → &lt;head&gt; + &lt;body&gt;</li>
+<li>Common tags: h1-h6, p, a, img, ul/ol, div, table</li>
+<li>Attributes add info: href, src, alt, id, class</li>
+<li>Forms use &lt;form&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;</li>
+</ul>
+</div>
+                <div class="lesson-nav">
+                    <span></span><a href="lesson-2.html" class="btn btn-primary">Next: CSS & Responsive Design <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none;margin:0;padding:1rem 0;">
+                <p class="mb-0">&copy; 2026 Bhardwaj Innovation Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>

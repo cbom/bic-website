@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2: MS Excel - BIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><i class="fas fa-laptop-code me-2"></i>BIC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../courses.html"><i class="fas fa-book me-1"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../../materials.html"><i class="fas fa-graduation-cap me-1"></i> Study Materials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../contact.html"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+                </ul>
+                <a class="nav-link lang-toggle" href="../../../hi/materials/ms-office/lesson-2.html">हिन्दी</a>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-light py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../../materials.html">Study Materials</a></li>
+                    <li class="breadcrumb-item"><a href="../../materials.html">MS Office</a></li>
+                    <li class="breadcrumb-item active">Lesson 2: MS Excel</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <section class="py-4">
+        <div class="container">
+            <div class="lesson-content">
+                <h1>Lesson 2: MS Excel — Workbook, Formulas & Charts</h1>
+<p class="text-muted"><i class="fas fa-clock me-1"></i> Reading time: 15 minutes | <i class="fas fa-signal me-1"></i> Level: Beginner to Intermediate</p>
+<hr>
+<h2>What is MS Excel?</h2>
+<p><strong>Microsoft Excel</strong> is a spreadsheet application used for data entry, calculations, data analysis, and creating charts. It organizes data in rows and columns (cells).</p>
+
+<h2>Key Concepts</h2>
+<ul>
+<li><strong>Workbook:</strong> An Excel file (e.g., data.xlsx) — can contain multiple sheets</li>
+<li><strong>Worksheet:</strong> A single sheet/tab within a workbook</li>
+<li><strong>Cell:</strong> Intersection of a row and column (e.g., A1, B5, C10)</li>
+<li><strong>Cell Reference:</strong> The address of a cell (Column letter + Row number)</li>
+<li><strong>Range:</strong> A group of cells (e.g., A1:A10 means cells A1 through A10)</li>
+</ul>
+
+<h2>Data Entry & Formatting</h2>
+<ul>
+<li>Click a cell and type to enter data</li>
+<li>Press Enter to move down, Tab to move right</li>
+<li><strong>Number Format:</strong> General, Number, Currency, Date, Percentage</li>
+<li><strong>Cell Formatting:</strong> Font, borders, fill colour, alignment, merge cells</li>
+</ul>
+
+<h2>Important Formulas & Functions</h2>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead class="table-primary"><tr><th>Function</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>=SUM()</td><td>Add numbers</td><td>=SUM(A1:A10)</td></tr>
+<tr><td>=AVERAGE()</td><td>Calculate average</td><td>=AVERAGE(B1:B20)</td></tr>
+<tr><td>=MAX()</td><td>Find largest value</td><td>=MAX(C1:C50)</td></tr>
+<tr><td>=MIN()</td><td>Find smallest value</td><td>=MIN(C1:C50)</td></tr>
+<tr><td>=COUNT()</td><td>Count cells with numbers</td><td>=COUNT(A1:A100)</td></tr>
+<tr><td>=IF()</td><td>Conditional logic</td><td>=IF(A1>50,"Pass","Fail")</td></tr>
+<tr><td>=VLOOKUP()</td><td>Search and return value</td><td>=VLOOKUP(A1,Sheet2!A:B,2,0)</td></tr>
+<tr><td>=CONCATENATE()</td><td>Join text</td><td>=CONCATENATE(A1," ",B1)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Creating Charts</h2>
+<ol>
+<li>Select the data range you want to chart</li>
+<li>Go to Insert tab → Charts group</li>
+<li>Choose chart type: Column, Bar, Line, Pie, Area</li>
+<li>Customize with Chart Tools (Design, Format)</li>
+</ol>
+
+<h2>Sorting & Filtering</h2>
+<ul>
+<li><strong>Sort:</strong> Arrange data in ascending/descending order (Data → Sort)</li>
+<li><strong>Filter:</strong> Show only specific data that matches criteria (Data → Filter)</li>
+<li><strong>Conditional Formatting:</strong> Highlight cells based on rules (Home → Conditional Formatting)</li>
+</ul>
+
+<h2>Useful Shortcuts</h2>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead class="table-primary"><tr><th>Action</th><th>Shortcut</th></tr></thead>
+<tbody>
+<tr><td>AutoSum</td><td>Alt + =</td></tr>
+<tr><td>Insert Row</td><td>Ctrl + Shift + +</td></tr>
+<tr><td>Delete Row</td><td>Ctrl + -</td></tr>
+<tr><td>Go to Cell</td><td>Ctrl + G</td></tr>
+<tr><td>Format Cells</td><td>Ctrl + 1</td></tr>
+<tr><td>New Sheet</td><td>Shift + F11</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="alert alert-success">
+<h5>Key Points to Remember</h5>
+<ul class="mb-0">
+<li>Excel organizes data in cells (rows × columns)</li>
+<li>Formulas start with = sign (e.g., =SUM(A1:A10))</li>
+<li>Key functions: SUM, AVERAGE, MAX, MIN, COUNT, IF</li>
+<li>Charts visualize data — select data → Insert → Chart</li>
+<li>Sort and Filter help manage large datasets</li>
+</ul>
+</div>
+                <div class="lesson-nav">
+                    <a href="lesson-1.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-1"></i> Previous: MS Word</a><a href="lesson-3.html" class="btn btn-primary">Next: MS PowerPoint <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none;margin:0;padding:1rem 0;">
+                <p class="mb-0">&copy; 2026 Bhardwaj Innovation Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>

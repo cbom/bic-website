@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2: CSS & Responsive Design - BIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><i class="fas fa-laptop-code me-2"></i>BIC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../courses.html"><i class="fas fa-book me-1"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../../materials.html"><i class="fas fa-graduation-cap me-1"></i> Study Materials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../contact.html"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+                </ul>
+                <a class="nav-link lang-toggle" href="../../../hi/materials/html-web/lesson-2.html">हिन्दी</a>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-light py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../../materials.html">Study Materials</a></li>
+                    <li class="breadcrumb-item"><a href="../../materials.html">HTML & Web Designing</a></li>
+                    <li class="breadcrumb-item active">Lesson 2: CSS & Responsive Design</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <section class="py-4">
+        <div class="container">
+            <div class="lesson-content">
+                <h1>Lesson 2: CSS Styling & Responsive Design</h1>
+<p class="text-muted"><i class="fas fa-clock me-1"></i> Reading time: 15 minutes | <i class="fas fa-signal me-1"></i> Level: Intermediate</p>
+<hr>
+<h2>What is CSS?</h2>
+<p><strong>CSS (Cascading Style Sheets)</strong> is used to style and format HTML elements — controlling colours, fonts, spacing, layout, and more.</p>
+
+<h2>Ways to Add CSS</h2>
+<ul>
+<li><strong>Inline:</strong> style attribute on element: <code>&lt;p style="color:red;"&gt;</code></li>
+<li><strong>Internal:</strong> &lt;style&gt; tag in &lt;head&gt;</li>
+<li><strong>External:</strong> Separate .css file linked with &lt;link&gt; tag (recommended)</li>
+</ul>
+
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>&lt;!-- External CSS --&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+<h2>CSS Selectors</h2>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>/* Element selector */
+h1 { color: blue; }
+
+/* Class selector */
+.highlight { background: yellow; }
+
+/* ID selector */
+#header { font-size: 24px; }
+
+/* Multiple selectors */
+h1, h2, h3 { font-family: Arial; }</code></pre>
+
+<h2>Common CSS Properties</h2>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead class="table-primary"><tr><th>Property</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>color</td><td>Text colour</td><td>color: #333;</td></tr>
+<tr><td>background-color</td><td>Background colour</td><td>background-color: #f0f0f0;</td></tr>
+<tr><td>font-size</td><td>Text size</td><td>font-size: 16px;</td></tr>
+<tr><td>font-family</td><td>Font type</td><td>font-family: Arial, sans-serif;</td></tr>
+<tr><td>margin</td><td>Space outside element</td><td>margin: 10px;</td></tr>
+<tr><td>padding</td><td>Space inside element</td><td>padding: 15px;</td></tr>
+<tr><td>border</td><td>Border around element</td><td>border: 1px solid #000;</td></tr>
+<tr><td>width/height</td><td>Size of element</td><td>width: 100%; height: 200px;</td></tr>
+<tr><td>display</td><td>How element is displayed</td><td>display: flex;</td></tr>
+<tr><td>text-align</td><td>Text alignment</td><td>text-align: center;</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Box Model</h2>
+<p>Every HTML element is a box with: Content → Padding → Border → Margin</p>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>.box {
+    width: 300px;
+    padding: 20px;      /* space inside */
+    border: 2px solid blue;
+    margin: 10px;       /* space outside */
+}</code></pre>
+
+<h2>Flexbox Layout</h2>
+<p>Flexbox makes it easy to arrange elements in a row or column.</p>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>.container {
+    display: flex;
+    justify-content: space-between;  /* horizontal spacing */
+    align-items: center;             /* vertical alignment */
+}
+
+.item {
+    flex: 1;  /* equal width items */
+}</code></pre>
+
+<h2>Responsive Design (Media Queries)</h2>
+<p>Makes websites look good on all screen sizes (phone, tablet, desktop).</p>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>/* Default: Desktop */
+.container { display: flex; }
+
+/* Tablet: screens below 768px */
+@media (max-width: 768px) {
+    .container { flex-direction: column; }
+}
+
+/* Mobile: screens below 480px */
+@media (max-width: 480px) {
+    body { font-size: 14px; }
+}</code></pre>
+
+<h2>Basic JavaScript Introduction</h2>
+<p>JavaScript adds interactivity to web pages (clicks, animations, validation).</p>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>&lt;script&gt;
+// Show alert on button click
+function showMessage() {
+    alert("Hello! Welcome to our website.");
+}
+
+// Change text content
+document.getElementById("demo").innerHTML = "Changed!";
+&lt;/script&gt;
+
+&lt;button onclick="showMessage()"&gt;Click Me&lt;/button&gt;
+&lt;p id="demo"&gt;Original text&lt;/p&gt;</code></pre>
+
+<div class="alert alert-success">
+<h5>Key Points to Remember</h5>
+<ul class="mb-0">
+<li>CSS styles HTML elements (colours, fonts, layout)</li>
+<li>External CSS (separate file) is best practice</li>
+<li>Selectors: element, .class, #id</li>
+<li>Box Model: content + padding + border + margin</li>
+<li>Flexbox for layout; Media queries for responsive design</li>
+<li>JavaScript adds interactivity</li>
+</ul>
+</div>
+                <div class="lesson-nav">
+                    <a href="lesson-1.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-1"></i> Previous: HTML5 Basics</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none;margin:0;padding:1rem 0;">
+                <p class="mb-0">&copy; 2026 Bhardwaj Innovation Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>

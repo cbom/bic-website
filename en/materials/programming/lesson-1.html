@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: Introduction to Programming - BIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><i class="fas fa-laptop-code me-2"></i>BIC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../courses.html"><i class="fas fa-book me-1"></i> Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../../materials.html"><i class="fas fa-graduation-cap me-1"></i> Study Materials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../contact.html"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+                </ul>
+                <a class="nav-link lang-toggle" href="../../../hi/materials/programming/lesson-1.html">हिन्दी</a>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-light py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../../materials.html">Study Materials</a></li>
+                    <li class="breadcrumb-item"><a href="../../materials.html">Programming Languages</a></li>
+                    <li class="breadcrumb-item active">Lesson 1: Introduction to Programming</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <section class="py-4">
+        <div class="container">
+            <div class="lesson-content">
+                <h1>Lesson 1: Introduction to Programming & C Language</h1>
+<p class="text-muted"><i class="fas fa-clock me-1"></i> Reading time: 15 minutes | <i class="fas fa-signal me-1"></i> Level: Intermediate</p>
+<hr>
+<h2>What is Programming?</h2>
+<p><strong>Programming</strong> is the process of writing instructions that a computer can understand and execute to perform a specific task. These instructions are written using a <strong>programming language</strong>.</p>
+
+<h2>Basic Concepts</h2>
+<ul>
+<li><strong>Algorithm:</strong> A step-by-step solution to a problem</li>
+<li><strong>Flowchart:</strong> A graphical representation of the logic using shapes</li>
+<li><strong>Source Code:</strong> Instructions written in a programming language</li>
+<li><strong>Compiler:</strong> Software that translates source code into machine language</li>
+<li><strong>Execution:</strong> Running the compiled program</li>
+</ul>
+
+<h2>C Programming Language</h2>
+<p><strong>C</strong> was developed by Dennis Ritchie in 1972. It is called the "mother of all languages" because many modern languages (C++, Java, Python) are influenced by it.</p>
+
+<h3>Structure of a C Program</h3>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>#include &lt;stdio.h&gt;    // Header file for input/output
+
+int main() {           // Main function - program starts here
+    printf("Hello World!\n");   // Print text on screen
+    return 0;          // Program ended successfully
+}</code></pre>
+
+<h3>Variables and Data Types</h3>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead class="table-primary"><tr><th>Data Type</th><th>Used For</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>int</td><td>Whole numbers</td><td>int age = 25;</td></tr>
+<tr><td>float</td><td>Decimal numbers</td><td>float price = 99.5;</td></tr>
+<tr><td>char</td><td>Single character</td><td>char grade = 'A';</td></tr>
+<tr><td>double</td><td>Large decimal numbers</td><td>double pi = 3.14159;</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Operators</h3>
+<ul>
+<li><strong>Arithmetic:</strong> + (add), - (subtract), * (multiply), / (divide), % (remainder)</li>
+<li><strong>Relational:</strong> == (equal), != (not equal), > (greater), < (less), >= , <=</li>
+<li><strong>Logical:</strong> && (AND), || (OR), ! (NOT)</li>
+</ul>
+
+<h3>Decision Making (if-else)</h3>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>if (marks >= 50) {
+    printf("Pass");
+} else {
+    printf("Fail");
+}</code></pre>
+
+<h3>Loops</h3>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>// Print numbers 1 to 10
+for (int i = 1; i <= 10; i++) {
+    printf("%d\n", i);
+}
+
+// While loop
+int count = 1;
+while (count <= 5) {
+    printf("%d\n", count);
+    count++;
+}</code></pre>
+
+<h3>Functions</h3>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 3);  // result = 8
+    printf("Sum = %d", result);
+    return 0;
+}</code></pre>
+
+<div class="alert alert-success">
+<h5>Key Points to Remember</h5>
+<ul class="mb-0">
+<li>Programming = writing instructions for computers</li>
+<li>C program: #include, main(), printf(), return 0</li>
+<li>Data types: int, float, char, double</li>
+<li>Control flow: if-else for decisions, for/while for loops</li>
+<li>Functions break code into reusable pieces</li>
+</ul>
+</div>
+                <div class="lesson-nav">
+                    <span></span><a href="lesson-2.html" class="btn btn-primary">Next: Python Basics <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none;margin:0;padding:1rem 0;">
+                <p class="mb-0">&copy; 2026 Bhardwaj Innovation Center. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पाठ 2: CSS और रेस्पॉन्सिव डिज़ाइन - BIC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/css/style.css" rel="stylesheet">
+</head>
+<body class="lang-hi">
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><i class="fas fa-laptop-code me-2"></i>BIC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fas fa-home me-1"></i> होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../courses.html"><i class="fas fa-book me-1"></i> कोर्स</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../../materials.html"><i class="fas fa-graduation-cap me-1"></i> अध्ययन सामग्री</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../contact.html"><i class="fas fa-envelope me-1"></i> संपर्क करें</a></li>
+                </ul>
+                <a class="nav-link lang-toggle" href="../../../en/materials/html-web/lesson-2.html">English</a>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-light py-2">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../../materials.html">अध्ययन सामग्री</a></li>
+                    <li class="breadcrumb-item"><a href="../../materials.html">HTML और वेब डिज़ाइनिंग</a></li>
+                    <li class="breadcrumb-item active">पाठ 2: CSS और रेस्पॉन्सिव डिज़ाइन</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <section class="py-4">
+        <div class="container">
+            <div class="lesson-content">
+                <h1>पाठ 2: CSS स्टाइलिंग और रेस्पॉन्सिव डिज़ाइन</h1>
+<p class="text-muted"><i class="fas fa-clock me-1"></i> पढ़ने का समय: 15 मिनट | <i class="fas fa-signal me-1"></i> स्तर: मध्यम</p>
+<hr>
+<h2>CSS क्या है?</h2>
+<p><strong>CSS (Cascading Style Sheets)</strong> HTML तत्वों को स्टाइल और फ़ॉर्मेट करता है — रंग, फ़ॉन्ट, स्पेसिंग, लेआउट।</p>
+
+<h2>CSS जोड़ने के तरीके</h2>
+<ul>
+<li><strong>Inline:</strong> तत्व पर style: <code>&lt;p style="color:red;"&gt;</code></li>
+<li><strong>Internal:</strong> &lt;style&gt; टैग &lt;head&gt; में</li>
+<li><strong>External:</strong> अलग .css फ़ाइल (सबसे अच्छा तरीका)</li>
+</ul>
+
+<h2>CSS सेलेक्टर</h2>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>/* एलिमेंट सेलेक्टर */
+h1 { color: blue; }
+
+/* क्लास सेलेक्टर */
+.highlight { background: yellow; }
+
+/* ID सेलेक्टर */
+#header { font-size: 24px; }</code></pre>
+
+<h2>सामान्य CSS प्रॉपर्टीज</h2>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead class="table-primary"><tr><th>प्रॉपर्टी</th><th>उद्देश्य</th><th>उदाहरण</th></tr></thead>
+<tbody>
+<tr><td>color</td><td>टेक्स्ट रंग</td><td>color: #333;</td></tr>
+<tr><td>background-color</td><td>पृष्ठभूमि रंग</td><td>background-color: #f0f0f0;</td></tr>
+<tr><td>font-size</td><td>टेक्स्ट आकार</td><td>font-size: 16px;</td></tr>
+<tr><td>margin</td><td>बाहर की जगह</td><td>margin: 10px;</td></tr>
+<tr><td>padding</td><td>अंदर की जगह</td><td>padding: 15px;</td></tr>
+<tr><td>border</td><td>बॉर्डर</td><td>border: 1px solid #000;</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>बॉक्स मॉडल</h2>
+<p>हर HTML एलिमेंट एक बॉक्स है: Content → Padding → Border → Margin</p>
+
+<h2>Flexbox लेआउट</h2>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}</code></pre>
+
+<h2>रेस्पॉन्सिव डिज़ाइन (Media Queries)</h2>
+<p>सभी स्क्रीन आकारों (फोन, टैबलेट, डेस्कटॉप) पर अच्छा दिखने के लिए।</p>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>/* डेस्कटॉप डिफ़ॉल्ट */
+.container { display: flex; }
+
+/* टैबलेट: 768px से नीचे */
+@media (max-width: 768px) {
+    .container { flex-direction: column; }
+}
+
+/* मोबाइल: 480px से नीचे */
+@media (max-width: 480px) {
+    body { font-size: 14px; }
+}</code></pre>
+
+<h2>JavaScript का परिचय</h2>
+<pre style="background:#f8f9fa;padding:1rem;border-radius:8px;overflow-x:auto;"><code>&lt;script&gt;
+function showMessage() {
+    alert("नमस्ते! स्वागत है।");
+}
+&lt;/script&gt;
+
+&lt;button onclick="showMessage()"&gt;क्लिक करें&lt;/button&gt;</code></pre>
+
+<div class="alert alert-success">
+<h5>मुख्य बिंदु</h5>
+<ul class="mb-0">
+<li>CSS HTML तत्वों को स्टाइल करता है</li>
+<li>External CSS (अलग फ़ाइल) सबसे अच्छा</li>
+<li>सेलेक्टर: element, .class, #id</li>
+<li>Box Model: content + padding + border + margin</li>
+<li>Flexbox लेआउट के लिए; Media queries रेस्पॉन्सिव के लिए</li>
+</ul>
+</div>
+                <div class="lesson-nav">
+                    <a href="lesson-1.html" class="btn btn-outline-primary"><i class="fas fa-arrow-left me-1"></i> पिछला: HTML5 बेसिक्स</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none;margin:0;padding:1rem 0;">
+                <p class="mb-0">© 2026 भारद्वाज इनोवेशन सेंटर। सर्वाधिकार सुरक्षित।</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+</body>
+</html>
